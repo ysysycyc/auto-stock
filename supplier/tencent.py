@@ -89,7 +89,6 @@ def get_by_minutes(pure_stock_code):
         response = requests.get(f'https://web.ifzq.gtimg.cn/appstock/app/minute/query?code={item}')
         if response.status_code == 200:
             text = response.json()
-            print(text)
             result.append(transform_data(text, item))
         else:
             print('Error:', response.status_code, response.text)

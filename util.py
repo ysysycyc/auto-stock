@@ -44,5 +44,6 @@ def check_above_by_minutes(sh_stock_price, target_stock_price):
     # 对 array2 进行缩放
     target_stock_price_trimmed = target_stock_price_trimmed * scale_factor
     rate = np.sum(target_stock_price_trimmed > sh_stock_price_trimmed) / len(sh_stock_price_trimmed)
+    print('rate: ', rate)
     return rate
 
